@@ -13,7 +13,7 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const {last} = useData()
+  const { last } = useData()
   return <>
     <header>
       <Menu />
@@ -96,6 +96,7 @@ const Page = () => {
         <Modal
           Content={
             <div className="ModalMessage--success">
+
               <div>Message envoyé !</div>
               <p>
                 Merci pour votre message nous tâcherons de vous répondre dans
@@ -107,7 +108,7 @@ const Page = () => {
           {({ setIsOpened }) => (
             <Form
               onSuccess={() => setIsOpened(true)}
-              onError={() => null}
+              onError={() => console.log("Une erreur s'est produite")}
             />
           )}
         </Modal>
