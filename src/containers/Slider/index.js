@@ -40,7 +40,7 @@ const Slider = () => {
               <div className="SlideCard__description">
                 <h3>{event.title}</h3>
                 <p>{event.description}</p>
-                <div>{getMonth(new Date(event.date))}</div>
+                <div data-testid="event_month">{getMonth(new Date(event.date))}</div>
               </div>
             </div>
           </div>

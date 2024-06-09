@@ -30,10 +30,12 @@ describe("When Form is created", () => {
 
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
-    // to implement
+    render(<Home />);
+    expect( screen.getByTestId("card-testid")).toBeInTheDocument();    
   })
   it("a list a people is displayed", () => {
-    // to implement
+    render(<Home />);
+    expect( screen.getByTestId("people-list")).toBeInTheDocument();    
   })
   it("a footer is displayed", () => {
     // to implement
